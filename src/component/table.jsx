@@ -1,5 +1,6 @@
-// import { BsTrashFill} from "react-icons/fa";
-import { useState } from "react";
+import { BsTrashFill } from "react-icons/bs";
+import { BsFillCreditCard2BackFill } from "react-icons/bs";
+
 
 const Table=({data,setData})=>{
 
@@ -49,8 +50,8 @@ const Table=({data,setData})=>{
             {
                 data.map((item,index)=>(
                 <tr>
-                    <td scope="col" className="text-center" onClick={()=>remove(index)}>delete</td>
-                    <td scope="col" className="text-center" onClick={()=>edit(index)}>edite</td>
+                    <td scope="col" className="text-center" onClick={()=>remove(index)}><BsTrashFill/></td>
+                    <td scope="col" className="text-center" onClick={()=>edit(index)}> <BsFillCreditCard2BackFill/></td>
                     <td scope="col" className="text-center">{index}</td>
                     <td scope="col" className="text-center">{item.name}</td>
                     <td scope="col" className="text-center">{item.family}</td>
